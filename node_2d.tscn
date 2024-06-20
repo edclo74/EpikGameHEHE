@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlkflxgvwd4ed"]
+
+[ext_resource type="Texture2D" uid="uid://cdco3c72dhnmj" path="res://Sprites/Sprite-Walking-Sheet.aseprite" id="1_tvrqn"]
+
+[sub_resource type="Animation" id="Animation_lyclm"]
+resource_name = "Walking"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1buww"]
+_data = {
+"Walking": SubResource("Animation_lyclm")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tvrqn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_1buww")
+}
